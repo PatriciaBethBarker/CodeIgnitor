@@ -7,7 +7,7 @@
 *
 * @package Gig Central
 * @subpackage Customer
-* @author 
+* @author Patricia Barker patriciabethbarker@gmail.com
 * @version 1.0 2015/04/30
 * @link @link http://www.tcbcommercialproperties.com/sandbox/ci/
 * @license http://www.apache.org/licenses/LICENSE-2.0
@@ -37,6 +37,7 @@ class Customer extends CI_Controller {
     {
         parent::__construct();
         $this->config->set_item('title', 'Customers');
+	$this->config->set_item('banner', 'Global Customer banner');
     }
 
     /**
@@ -48,7 +49,19 @@ class Customer extends CI_Controller {
      */
 	public function index()
 	{
+	$data["customer"] = $this->customer_model->get_customer();
+	//set title for page
+	$this->config->set_item('title', 'Customers');
         //passes data to view template
-      	$this->load->view('customer/index');
+      	$this->load->view('customer/index', $data);
+	}
+	public function view($customer = null) {
+	    if ($customer == null) {
+		show_404();
+	    }
+	    $data["customer"] = $this->customer_model->get_customer($customerName);
+	    $this->config->set_item('title', 'Customers'); //load default into object
+	    //pass data to views template
+	    $this->load->view('customer/index', $data);
 	}
 }
