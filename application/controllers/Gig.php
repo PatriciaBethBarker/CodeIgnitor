@@ -8,7 +8,7 @@
 * @subpackage Gigs_form
 * @author Patricia Barker <pbarke01@seattlecentral.edu>
 * @version 1.0 2015/05/24
-* @link http://www.tcbcommercialproperties.com/sandbox/ci/Gigs_form
+* @link http://www.tcbcommercialproperties.com/sandbox/ci/
 * @license http://www.apache.org/licenses/LICENSE-2.0
 * @see Gig_model.php
 * @see index.php
