@@ -6,14 +6,14 @@
 *
 * @package ITC 260 CodeIgnitor - Gig Central
 * @subpackage CONTROLLER
-* @author Patricia Barker <pbarke01@seattlecentral.edu>
+* @author Patricia Barker <patriciabethbarker@gmail.com>
 * @version 1.0 2015/05/26
-* @link http://www.tcbcommercialproperties.com/sandbox/ci/ ??
+* @link http://www.tcbcommercialproperties.com/sandbox/ci/ 
 * @license http://www.apache.org/licenses/LICENSE-2.0
 * @see controllers/Gig.php
-* @see views/gig/index.php
+* @see views/gigs_form/index.php
 * @see index.php
-* @todo none  ??
+* @todo none  ?
 */
 
 /**
