@@ -3,16 +3,16 @@
 * index.php view page for generic gigs_form controller
 *
 *
-* view/gigs_form/index.php
+* views/gigs_form/index.php
 *
 * @package ITC 260 Gig Central CodeIgnitor
-* @subpackage Gigs_form
+* @subpackage Gig
 * @author Patricia Barker <pbarke01@seattlecentral.edu>
 * @version 1.0 2015/05/25
-* @link http://www.tcbcommercialproperties.com/sandbox/ci/Gigs_form
+* @link http://www.tcbcommercialproperties.com/sandbox/ci/
 * @license http://www.apache.org/licenses/LICENSE-2.0
-* @see Gigs_model.php
-* @see Gigs_form.php
+* @see Gig_model.php
+* @see Gig.php
 * @todo none
 */
 
