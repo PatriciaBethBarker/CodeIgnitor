@@ -26,7 +26,7 @@ $this->load->view($this->config->item('theme') . 'header');
 <?php foreach($customer->result() as $customerItem)
 {
     ?>
-    <h2><?php echo $customerItem->FirstName; ?></h2>
+    <h3><?php echo $customerItem->FirstName; ?></h3>
     <?php
 }
    $this->load->view($this->config->item('theme') . 'footer');

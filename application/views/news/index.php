@@ -8,6 +8,7 @@ $this->load->view($this->config->item('theme') . 'header');
 
     <h3><?php echo $news_item['title'] ?></h3>
     <div class="main">
+    
     </div>
     <p>
     <?= anchor('news/' . $news_item['slug'], $news_item['title']); ?>
