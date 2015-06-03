@@ -1,8 +1,8 @@
 <?php
 /*
  * News.php Controller
- * Date: 4/16/15
- * Time: 5:35 PM
+ * Date: 6/3/15
+ * Time: 10:03 AM
  */
 
 class News extends CI_Controller {
