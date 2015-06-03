@@ -33,8 +33,10 @@ class Customer_model extends CI_Model {
             $this->load->database();
     }//end constructor method
     
-    public function get_customers()
-    {
+    public function get_customers($customer = false) {
+        if ($customer) {
+                return "Hello " . $customer . "from the customer_model";
+        }
         return $this->db->get('test_Customers');
     }//end get_customer method
     
