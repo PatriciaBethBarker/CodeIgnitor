@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 /*
 | -------------------------------------------------------------------
 | AUTO-LOADER
@@ -29,7 +28,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | 7. Models
 |
 */
-
 /*
 | -------------------------------------------------------------------
 |  Auto-load Packages
@@ -39,10 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |  $autoload['packages'] = array(APPPATH.'third_party', '/usr/local/shared');
 |
 */
-
 $autoload['packages'] = array();
-
-
 /*
 | -------------------------------------------------------------------
 |  Auto-load Libraries
@@ -59,10 +54,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-
 $autoload['libraries'] = array();
-
-
 /*
 | -------------------------------------------------------------------
 |  Auto-load Drivers
@@ -75,10 +67,7 @@ $autoload['libraries'] = array();
 |
 |	$autoload['drivers'] = array('cache');
 */
-
 $autoload['drivers'] = array();
-
-
 /*
 | -------------------------------------------------------------------
 |  Auto-load Helper Files
@@ -87,11 +76,8 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-
 //adds URL helper and a common helper of functions
 $autoload['helper'] = array('url','common');
-
-
 /*
 | -------------------------------------------------------------------
 |  Auto-load Config files
@@ -104,11 +90,8 @@ $autoload['helper'] = array('url','common');
 | config files.  Otherwise, leave it blank.
 |
 */
-
 //this is our config file, where theme and other data goes
 $autoload['config'] = array('custom_config');
-
-
 /*
 | -------------------------------------------------------------------
 |  Auto-load Language files
@@ -121,10 +104,7 @@ $autoload['config'] = array('custom_config');
 | "codeigniter_lang.php" would be referenced as array('codeigniter');
 |
 */
-
 $autoload['language'] = array();
-
-
 /*
 | -------------------------------------------------------------------
 |  Auto-load Models

@@ -68,12 +68,13 @@ $route['news'] = 'news';
 
 $route['gigs_form'] = 'gigs_form';
 
-$route['customer'] = 'customer';
+//$route['customer'] = 'customer';
 $route['customers'] = 'customer';
+$route['customer/(:any)'] = 'customer/view/$1';
 
 $route['(:any)'] = 'pages/view/$1';
-//$route['default_controller'] = 'pages/view';
+$route['default_controller'] = 'pages/view';  //switch back to this if not 80
 
 //bootswatch example route
 $route['example'] = 'customer/example';
-$route['default_controller'] = 'customer';
+//$route['default_controller'] = 'customer';  //switch out if not 76
