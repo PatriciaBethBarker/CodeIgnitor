@@ -17,6 +17,8 @@
 
 SET foreign_key_checks = 0; #turn off constraints temporarily
 
+DROP TABLE IF EXISTS Company;
+DROP TABLE IF EXISTS Contact;
 DROP TABLE IF EXISTS Gig;
 
 CREATE TABLE Company(
@@ -36,7 +38,7 @@ FOREIGN KEY (GigID) REFERENCES ContactID (CompanyID)
 FOREIGN KEY (ContactID) REFERENCES GigID(CompanyID)
 )ENGINE=INNODB;
 
-CREATE TABEL Contact(
+CREATE TABLE Contact(
 ContactID INT UNSIGNED NOT NULL AUTO_INCREMENT,
 FirstName varchar(30) NOT NULL,
 LastName varchar(30) NOT NULL,
