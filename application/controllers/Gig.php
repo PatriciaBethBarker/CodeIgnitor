@@ -11,6 +11,7 @@
 * @link http://www.tcbcommercialproperties.com/sandbox/ci/
 * @license http://www.apache.org/licenses/LICENSE-2.0
 * @see Gig_model.php
+* @see form.php
 * @see index.php
 * @todo none
 */
@@ -22,7 +23,7 @@
  * @see Gig_model.php
  * @todo none
  */
-class Gigs_form extends CI_Controller
+class Gig extends CI_Controller
 {//begin controller
         
    /**
@@ -46,11 +47,18 @@ class Gigs_form extends CI_Controller
         
         public function index()
         {//begin function index
-                $data['query'] = $this->gig_model->get_gigs_form();//check this
+                $data['query'] = $this->gig_model->get_customers();//check this
                 
-                $data['title']= 'Gigs';
+                $data['title']= 'Gig';
               
                 $this->load->view('gigs_form/index', data);  
         }#end function index
+        
+        public function addForm()
+        {//create form to add gigs
+                $this->load->helper('form');
+		$this->config->set_item('title', 'Gig'); 
+		$this->load->view('gigs_form/form');
+        }#end function addForm()
         
 }#end Gigs class/controller

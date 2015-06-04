@@ -36,10 +36,10 @@ class Gig_model extends CI_Model {
                 $this->load->database();
         }#end constructor
        
-       public function get_gigs_form()
+       public function get_customers()
        {
         //return "Hello from the Gigs_form model!";
-        return $this->db->get('test_customers'); //check this
+        return $this->db->get('test_Customers'); //check this
        }#end get_gigs_form()
        
 

@@ -23,11 +23,11 @@ $this->load->view($this->config->item('theme') . 'header');
 
     <h1><?= $this->config->item('title'); ?></h1>
 
-<?php foreach($customer->result() as $customerItem)
-{
-    ?>
-    <h3><?php echo $customerItem->FirstName; ?></h3>
-    <?php
-}
+<?php foreach($query as $customer); ?>
+
+<?php endforeach ?>
+
+<?php
+
    $this->load->view($this->config->item('theme') . 'footer');
 ?>
