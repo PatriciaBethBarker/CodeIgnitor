@@ -23,7 +23,6 @@ DROP TABLE IF EXISTS Gig;
 
 CREATE TABLE Company(
 CompanyID INT UNSIGNED NOT NULL AUTO_INCREMENT,
-User varchar(255),
 InputType ENUM('checkbox','radio','select','text') DEFAULT 'select',
 CompanyName varchar(100) NOT NULL,
 CompanyAddress varchar(85) NOT NULL,
@@ -34,32 +33,32 @@ CoPhone varchar(25) NOT NULL,
 Website varchar(100) NOT NULL,
 DateAdded DATETIME,
 PRIMARY KEY (CompanyID)
-FOREIGN KEY (GigID) REFERENCES ContactID (CompanyID)
-FOREIGN KEY (ContactID) REFERENCES GigID(CompanyID)
+FOREIGN KEY (GigsID) REFERENCES Contact (ContactID)
+FOREIGN KEY (ContactID) REFERENCES Gigs(GigsID)
 )ENGINE=INNODB;
 
 CREATE TABLE Contact(
 ContactID INT UNSIGNED NOT NULL AUTO_INCREMENT,
 FirstName varchar(30) NOT NULL,
 LastName varchar(30) NOT NULL,
-Email varchar(75) NULL,
+Email varchar(75) DEFAULT '',
 Phone varchar(25) NOT NULL,
 PRIMARY KEY (CompanyID)
-FOREIGN KEY (GigID) REFERENCES ContactID (CompanyID)
-FOREIGN KEY (ContactID) REFERENCES GigID(CompanyID)
+FOREIGN KEY (GigsID) REFERENCES Contact(ContactID)
+FOREIGN KEY (ContactID) REFERENCES Gigs(GigsID)
 )ENGINE=INNODB;
 
-CREATE TABLE Gig(
-GigID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE Gigs(
+GigsID INT UNSIGNED NOT NULL AUTO_INCREMENT,
 WorkExper varchar(500) NOT NULL,
 InterviewLoc varchar(255) NOT NULL,
 ApptTime varchar(255) NOT NULL,
 GigDesc varchar(500) NOT NULL,
-ProDetail varchar(350) NULL,
+ProDetail varchar(350) DEFAULT '',
 PayRate varchar(50) NOT NULL,
 LastUpdated TIMESTAMP DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
 PRIMARY KEY (CompanyID)
-FOREIGN KEY (GigID) REFERENCES ContactID(CompanyID)
-FOREIGN KEY (ContactID) REFERENCES GigID(CompanyID)
+FOREIGN KEY (GigsID) REFERENCES Contact(ContactID)
+FOREIGN KEY (ContactID) REFERENCES Gigs(GigsID)
 )ENGINE=INNODB; #INNODB allows creation table w/the same name in another db, table names will not collide
 
