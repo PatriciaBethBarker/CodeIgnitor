@@ -19,7 +19,7 @@ SET foreign_key_checks = 0; #turn off constraints temporarily
 
 DROP TABLE IF EXISTS Company;
 DROP TABLE IF EXISTS Contact;
-DROP TABLE IF EXISTS Gig;
+DROP TABLE IF EXISTS Gigs;
 
 CREATE TABLE Company(
 CompanyID INT UNSIGNED NOT NULL AUTO_INCREMENT,
