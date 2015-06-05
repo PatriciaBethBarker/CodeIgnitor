@@ -47,18 +47,18 @@ class Gig extends CI_Controller
         
         public function index()
         {//begin function index
-                $data['query'] = $this->gig_model->get_customers();//check this
-                
+                //$data['query'] = $this->gig_model->get_customers();//check this
+                $data['query'] = $this->gig_model->get_gigs();//check this
                 $data['title']= 'Gig';
               
                 $this->load->view('gigs_form/index', data);  
         }#end function index
         
-        public function addForm()
+        public function add()
         {//create form to add gigs
                 $this->load->helper('form');
 		$this->config->set_item('title', 'Gig'); 
-		$this->load->view('gigs_form/form');
+		$this->load->view('gigs/add'); //rename view folder gigs/add  add.php is the view
         }#end function addForm()
         
 }#end Gigs class/controller
