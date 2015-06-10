@@ -29,7 +29,7 @@ echo '
 
         <form class="form-horizontal" role="form" method="post">
 
-            <fieldset>
+        <fieldset>
             <div class="form-group">
                 <legend><h2><strong>Company Information</strong></h2></legend>
             </div>
@@ -139,6 +139,15 @@ echo '
             </div>        
                 </fieldset>
         <br>
+                <fieldset>
+            <div class="form-group">
+                <label for="PayRate" class="col-lg-3 control-label"><em>Pay rate</em></label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="PayRate" name="PayRate" placeholder="Pay rate">
+                    </div>
+            </div>
+                </fieldset>
+        <br>        
         <br>
                  <fieldset>
                 <legend><h3><strong>Project/Gig Description</strong></h3></legend>
@@ -172,20 +181,12 @@ echo '
             </div>
                 </fieldset>
         <br>
-                <fieldset>
-            <div class="form-group">
-                <label for="PayRate" class="col-lg-3 control-label"><em>Pay rate</em></label>
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" id="PayRate" name="PayRate" placeholder="Pay rate">
-                    </div>
-            </div>
-                </fieldset>
-        <br>
+
                      </div>
             </div>
                         <button type="submit" class="btn btn-default">Submit</button>
 
-                </fieldset>
+        </fieldset>
         </form>
     </div>
 </div>
