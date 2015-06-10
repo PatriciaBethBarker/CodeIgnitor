@@ -1954,6 +1954,12 @@ label {
   margin-bottom: 5px;
   font-weight: bold;
 }
+/*
+* only labels with the class .hidden-label will hide the label
+*/
+label.hidden-label {
+  display: none;
+}
 
 input[type="search"] {
   -webkit-box-sizing: border-box;

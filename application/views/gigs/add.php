@@ -152,31 +152,31 @@ echo '
                  <fieldset>
                 <legend><h3><strong>Project/Gig Description</strong></h3></legend>
             <div class="form-group">
-                <label for="GigOutline" class="col-lg-3 control-label"><em>Gig Outline</em></label><br>
+                <label for="GigOutline" class="col-lg-3 control-label hidden-label"><em>Gig Outline</em></label><br>
                     <div class="col-md-6">
-                        <textarea class="form-control" rows="15" cols="25" id="GigOutline" name="GigOutline"></textarea>
+                        <textarea class="form-control" rows="15" cols="25" id="GigOutline" name="GigOutline" placeholder="Project/Gig Description"></textarea>
                     </div>
             </div>
                 </fieldset>       
         <br>
         <br>
                 <fieldset>
-                <legend><h3><strong>Qualifications</strong></h3></legend>
+                <legend><h3><strong>Gig Qualifications</strong></h3></legend>
             <div class="form-group">
-                <label for="Qualifications" class="col-lg-3 control-label"><em>Qualifications</em></label><br>
+                <label for="Qualifications" class="col-lg-3 control-label hidden-label"><em>Qualifications</em></label><br>
                     <div class="col-md-6">
-                        <textarea  rows="15" cols="25" class="form-control" id="Qualifications" name="Qualifications"></textarea>
+                        <textarea  rows="15" cols="25" class="form-control" id="Qualifications" name="Qualifications" placeholder="Qualifications"></textarea>
                     </div>
             </div>
                 </fieldset>
         <br>
         <br>
                 <fieldset>
-                <legend><h3><strong>Project Special Instructions</strong></h3></legend>
+                <legend><h3><strong>Gig Project Special Instructions</strong></h3></legend>
             <div class="form-group">
-                <label for="SpecialInst" class="col-lg-3 control-label"><em>Special Instructions</em></label><br>
+                <label for="SpecialInst" class="col-lg-3 control-label hidden-label"><em>Special Instructions</em></label><br>
                     <div class="col-md-6">
-                        <textarea rows="15" cols="25" class="form-control" id="SpecialInst" name="SpecialInst"></textarea>
+                        <textarea rows="15" cols="25" class="form-control" id="SpecialInst" name="SpecialInst" placeholder="Special Instructions"></textarea>
                     </div>
             </div>
                 </fieldset>
