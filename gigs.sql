@@ -9,8 +9,8 @@
 * @version 1.0 2015/06/03
 * @link http://www.example.com/
 * @license http://www.apache.org/licenses/LICENSE-2.0
-* @see form.php
-* @see gigs_form/index.php
+* @see add.php
+* @see gigs_form/add.php
 * @todo none
 */
 
