@@ -31,7 +31,7 @@ echo '
 
             <fieldset>
             <div class="form-group">
-                <legend><h2><strong>Gig Opportunity</strong></h2></legend>
+                <legend><h2><strong>Company Information</strong></h2></legend>
             </div>
 
             <div class="form-group">
@@ -72,7 +72,7 @@ echo '
             <div class="form-group">
                 <label for="CompanyPhone" class="col-lg-3 control-label"><em>Company Phone</em></label>
                     <div class="col-md-6">
-                        <input type="text" id="CompanyPhone" name="CompanyPhone" placeholder="Phone Number">
+                        <input type="text" class="form-control" id="CompanyPhone" name="CompanyPhone" placeholder="Phone Number">
                     </div>
             </div>
 
@@ -92,7 +92,7 @@ echo '
         <br>
         <br>
                 <fieldset>
-                <legend><h3><strong>Company Contact</strong></h3></legend>
+                <legend><h3><strong>Company Gig Contact</strong></h3></legend>
 
             <div class="form-group">
                 <label for="FirstName" class="col-lg-3 control-label"><em>First Name</em></label>
@@ -125,84 +125,42 @@ echo '
         <br>
         <br>
                 <fieldset>
-                <legend><h3><strong>Work Experience</strong></h3></legend>
-
-            <div class="form-group">
-                <label for="Experience" class="col-lg-3 control-label"><em>Experience</em></label><br>
-                    <div class="col-md-6">
-                        <textarea  rows="15" cols="25" class="form-control" id="Experience" name="Experience"></textarea>
-                    </div>
-            </div>
-                </fieldset>
-        <br>
-                <fieldset>
-                <legend><h3><strong>Gig Interview Details</strong></h3></legend>
-
-            <div class="form-group">
-                <label for="InterviewLocation" class="col-lg-3 control-label"><em>Interview Location</em></label>
-                    <div class="col-md-6">
-                        <select class="form-control" id="InterviewLocation" name="InterviewLocation">
+            <div class="form-group">         
+                <label for="EmploymentType" class="col-lg-3 control-label"><em>Employment Type</em></label>
+                    <div class="col-md-6">         
+                        <select class="form-control" id="EmploymentType" name="EmploymentType">
                             <option value="select">Select One</option>
-                            <option value="scc">Seattle Central Campus</option>
-                            <option value="ncc">North Central Campus</option>
-                            <option value="southcc">South Central Campus</option>
-                            <option value="comaddress">Company Address</option>
-                            <option value="other">Other</option>
+                            <option value="contract">Contract</option>
+                            <option value="intern">Intern</option>
+                            <option value="temporary">Temporary</option>                            
+                            <option value="permanent">Permanent</option>
                         </select>
                     </div>
-            </div>
-        <br>
-        <br>
-            <div class="form-group">
-                <label for="AppointmentTime" class="col-lg-3 control-label"><em>Preferred Appointment Time</em></label>
-                    <div class="col-md-6">
-                        <select class="form-control" id="AppointmentTime" name="AppointmentTime">
-                            <option value="select">Select One</option>
-                                <option value="EightAm">8am</option>
-
-                                <option value="NineAm">9am</option>
-
-                                <option value="TenAm">10am</option>
-
-                                <option value="ElevenAm">11am</option>
-
-                                <option value="Noon">12am</option>
-
-                                <option value="OnePm">1pm</option>
-
-                                <option value="TwoPm">2pm</option>
-
-                                <option value="ThreePm">3pm</option>
-
-                                <option value="FourPm">4pm</option>
-
-                                <option value="FivePm">5pm</option>
-
-                                <option value="SixPm">6pm</option>
-
-                                <option value="SevenPm">7pm</option>
-
-                                <option value="EightPm">8pm</option>
-
-                                <option value="NinePm">9pm</option>
-
-                                <option value="TenPm">10pm</option>
-                        </select>
-                    </div>
-            </div>
+            </div>        
                 </fieldset>
         <br>
         <br>
-                <fieldset>
+                 <fieldset>
                 <legend><h3><strong>Project/Gig Description</strong></h3></legend>
-
             <div class="form-group">
                 <label for="GigOutline" class="col-lg-3 control-label"><em>Gig Outline</em></label><br>
                     <div class="col-md-6">
                         <textarea class="form-control" rows="15" cols="25" id="GigOutline" name="GigOutline"></textarea>
                     </div>
             </div>
+                </fieldset>       
+        <br>
+        <br>
+                <fieldset>
+                <legend><h3><strong>Qualifications</strong></h3></legend>
+            <div class="form-group">
+                <label for="Qualifications" class="col-lg-3 control-label"><em>Qualifications</em></label><br>
+                    <div class="col-md-6">
+                        <textarea  rows="15" cols="25" class="form-control" id="Qualifications" name="Qualifications"></textarea>
+                    </div>
+            </div>
                 </fieldset>
+        <br>
         <br>
                 <fieldset>
                 <legend><h3><strong>Project Special Instructions</strong></h3></legend>
