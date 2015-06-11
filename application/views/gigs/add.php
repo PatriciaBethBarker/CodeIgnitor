@@ -1,15 +1,15 @@
 <?php
 /**
-* index.php view page for generic gigs_form controller
+* add.php view page for generic gigs_form controller
 *
 *
-* views/gigs_form/form.php
+* views/gigs/add.php
 *
 * @package ITC 260 Gig Central CodeIgnitor
 * @subpackage Gig
 * @author Patricia Barker <pbarke01@seattlecentral.edu>
-* @version 1.0 2015/05/25
-* @link http://www.tcbcommercialproperties.com/sandbox/ci/
+* @version 2.0 2015/05/25
+* @link http://www.tcbcommercialproperties.com/sandbox/codeignitor/
 * @license http://www.apache.org/licenses/LICENSE-2.0
 * @see Gig_model.php
 * @see Gig.php
@@ -56,9 +56,9 @@ echo '
             </div>
 
             <div class="form-group">
-                <label for="State" class="col-lg-3 control-label"><em>State</em></label>
+                <label for="CompanyState" class="col-lg-3 control-label"><em>State</em></label>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" id="State" name="State" placeholder="State">
+                        <input type="text" class="form-control" id="CompanyState" name="CompanyState" placeholder="State">
                     </div>
             </div>
 
@@ -84,9 +84,9 @@ echo '
             </div>
 
             <div class="form-group">
-                <label for="Date" class="col-lg-3 control-label"><em>Gig Posting Date</em>&nbsp(mm/dd/yyyy)</label>
+                <label for="GigPostDate" class="col-lg-3 control-label"><em>Gig Posting Date</em> <br> &nbsp(mm/dd/yyyy)</label>
                     <div class="col-md-6">
-                        <input type="date" class="form-control" id="Date" name="Date" placeholder="Date Gig Posted">
+                        <input type="date" class="form-control" id="GigPostDate" name="GigPostDate" placeholder="Date Gig Posted">
                     </div>
             </div>
         <br>
@@ -125,18 +125,18 @@ echo '
         <br>
         <br>
                 <fieldset>
-            <div class="form-group">         
+            <div class="form-group">
                 <label for="EmploymentType" class="col-lg-3 control-label"><em>Employment Type</em></label>
-                    <div class="col-md-6">         
+                    <div class="col-md-6">
                         <select class="form-control" id="EmploymentType" name="EmploymentType">
                             <option value="select">Select One</option>
                             <option value="contract">Contract</option>
                             <option value="intern">Intern</option>
-                            <option value="temporary">Temporary</option>                            
+                            <option value="temporary">Temporary</option>
                             <option value="permanent">Permanent</option>
                         </select>
                     </div>
-            </div>        
+            </div>
                 </fieldset>
         <br>
                 <fieldset>
@@ -147,7 +147,7 @@ echo '
                     </div>
             </div>
                 </fieldset>
-        <br>        
+        <br>
         <br>
                  <fieldset>
                 <legend><h3><strong>Project/Gig Description</strong></h3></legend>
@@ -157,7 +157,7 @@ echo '
                         <textarea class="form-control" rows="15" cols="25" id="GigOutline" name="GigOutline" placeholder="Project/Gig Description"></textarea>
                     </div>
             </div>
-                </fieldset>       
+                </fieldset>
         <br>
         <br>
                 <fieldset>
@@ -174,9 +174,9 @@ echo '
                 <fieldset>
                 <legend><h3><strong>Gig Project Special Instructions</strong></h3></legend>
             <div class="form-group">
-                <label for="SpecialInst" class="col-lg-3 control-label hidden-label"><em>Special Instructions</em></label><br>
+                <label for="SpInstructions" class="col-lg-3 control-label hidden-label"><em>Special Instructions</em></label><br>
                     <div class="col-md-6">
-                        <textarea rows="15" cols="25" class="form-control" id="SpecialInst" name="SpecialInst" placeholder="Special Instructions"></textarea>
+                        <textarea rows="15" cols="25" class="form-control" id="SpInstructions" name="SpInstructions" placeholder="Special Instructions"></textarea>
                     </div>
             </div>
                 </fieldset>
