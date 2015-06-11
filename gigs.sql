@@ -1,5 +1,5 @@
 /**
-* Gigs.sql
+* gigs.sql
 *
 * Use to store data from profile form
 *
@@ -10,7 +10,7 @@
 * @link http://www.example.com/
 * @license http://www.apache.org/licenses/LICENSE-2.0
 * @see add.php
-* @see gigs_form/add.php
+* @see gigs/add.php
 * @todo none
 */
 
@@ -27,13 +27,13 @@ InputType ENUM('checkbox','radio','select','text') DEFAULT 'select',
 CompanyName varchar(100) NOT NULL,
 CompanyAddress varchar(85) NOT NULL,
 City varchar(40) NOT NULL,
-ST varchar(25) NOT NULL DEFAULT "WA",
+CompanyState varchar(25) NOT NULL DEFAULT "WA",
 ZipCode MEDIUMINT UNSIGNED NOT NULL,
-CoPhone varchar(25) NOT NULL,
-Website varchar(100) NOT NULL,
-DateAdded DATETIME,
+CompanyPhone varchar(25) NOT NULL,
+CompanyWebsite varchar(100) NOT NULL,
+GigPostDate DATETIME,
 PRIMARY KEY (CompanyID)
-FOREIGN KEY (GigsID) REFERENCES Contact (ContactID)
+FOREIGN KEY (GigsID) REFERENCES Contact(ContactID)
 FOREIGN KEY (ContactID) REFERENCES Gigs(GigsID)
 )ENGINE=INNODB;
 
@@ -50,11 +50,10 @@ FOREIGN KEY (ContactID) REFERENCES Gigs(GigsID)
 
 CREATE TABLE Gigs(
 GigsID INT UNSIGNED NOT NULL AUTO_INCREMENT,
-WorkExper varchar(500) NOT NULL,
-InterviewLoc varchar(255) NOT NULL,
-ApptTime varchar(255) NOT NULL,
-GigDesc varchar(500) NOT NULL,
-ProDetail varchar(350) DEFAULT '',
+Qualifications varchar(500) NOT NULL,
+EmploymentType varchar(255) NOT NULL,
+GigOutline varchar(500) NOT NULL,
+SpInstructions varchar(350) DEFAULT '',
 PayRate varchar(50) NOT NULL,
 LastUpdated TIMESTAMP DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
 PRIMARY KEY (CompanyID)
