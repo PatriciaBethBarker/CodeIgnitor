@@ -31,7 +31,7 @@ CompanyState varchar(25) NOT NULL DEFAULT "WA",
 ZipCode MEDIUMINT UNSIGNED NOT NULL,
 CompanyPhone varchar(25) NOT NULL,
 CompanyWebsite varchar(100) NOT NULL,
-GigPostDate DATETIME,
+
 PRIMARY KEY (CompanyID)
 FOREIGN KEY (GigsID) REFERENCES Contact(ContactID)
 FOREIGN KEY (ContactID) REFERENCES Gigs(GigsID)
@@ -50,11 +50,13 @@ FOREIGN KEY (ContactID) REFERENCES Gigs(GigsID)
 
 CREATE TABLE Gigs(
 GigsID INT UNSIGNED NOT NULL AUTO_INCREMENT,
-Qualifications varchar(500) NOT NULL,
+GigQualify varchar(500) NOT NULL,
 EmploymentType varchar(255) NOT NULL,
 GigOutline varchar(500) NOT NULL,
 SpInstructions varchar(350) DEFAULT '',
 PayRate varchar(50) NOT NULL,
+GigPosted DATETIME,
+
 LastUpdated TIMESTAMP DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
 PRIMARY KEY (CompanyID)
 FOREIGN KEY (GigsID) REFERENCES Contact(ContactID)

@@ -84,7 +84,7 @@ echo '
             </div>
 
             <div class="form-group">
-                <label for="GigPostDate" class="col-lg-3 control-label"><em>Gig Posting Date</em> <br> &nbsp(mm/dd/yyyy)</label>
+                <label for="GigPosted" class="col-lg-3 control-label"><em>Gig Posting Date</em> <br> &nbsp(mm/dd/yyyy)</label>
                     <div class="col-md-6">
                         <input type="date" class="form-control" id="GigPostDate" name="GigPostDate" placeholder="Date Gig Posted">
                     </div>
@@ -163,9 +163,9 @@ echo '
                 <fieldset>
                 <legend><h3><strong>Gig Qualifications</strong></h3></legend>
             <div class="form-group">
-                <label for="Qualifications" class="col-lg-3 control-label hidden-label"><em>Qualifications</em></label><br>
+                <label for="GigQualify" class="col-lg-3 control-label hidden-label"><em>Qualifications</em></label><br>
                     <div class="col-md-6">
-                        <textarea  rows="15" cols="25" class="form-control" id="Qualifications" name="Qualifications" placeholder="Qualifications"></textarea>
+                        <textarea  rows="15" cols="25" class="form-control" id="GigQualify" name="GigQualify" placeholder="Qualifications"></textarea>
                     </div>
             </div>
                 </fieldset>
