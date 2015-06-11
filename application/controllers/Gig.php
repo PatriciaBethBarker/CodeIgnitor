@@ -6,13 +6,12 @@
 *
 * @package ITC 260 Gig Central CodeIgnitor
 * @subpackage Gigs_form
-* @author Patricia Barker <pbarke01@seattlecentral.edu>
-* @version 1.0 2015/05/24
-* @link http://www.tcbcommercialproperties.com/sandbox/ci/
+* @author Patricia Barker <patriciabethbarker@gmail.com>
+* @version 2.0 2015/05/24
+* @link http://www.tcbcommercialproperties.com/sandbox/codeignitor/
 * @license http://www.apache.org/licenses/LICENSE-2.0
 * @see Gig_model.php
-* @see form.php
-* @see index.php
+* @see view/gigs/add.php
 * @todo none
 */
 
