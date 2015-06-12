@@ -7,7 +7,7 @@
 * @package ITC 260 CodeIgnitor - Gig Central
 * @subpackage CONTROLLER
 * @author Patricia Barker <patriciabethbarker@gmail.com>
-* @version 2.0 2015/06/10
+* @version 2.1 2015/06/11
 * @link http://www.tcbcommercialproperties.com/sandbox/codeignitor/ 
 * @license http://www.apache.org/licenses/LICENSE-2.0
 * @see controllers/Gig.php
@@ -41,7 +41,7 @@ class Gig_model extends CI_Model {
        {
         //return "Hello from the Gigs_form model!";
         //return $this->db->get('test_Customers'); //check this
-        return $this->db->get('test_Gigs'); //check this
+        return $this->db->get('Gigs'); //check this
        }#end get_gigs_form()
        
        public function add_gig()
@@ -68,7 +68,7 @@ class Gig_model extends CI_Model {
             'LastUpdated' => $this->input->post('LastUpdated'),              
             'text' => $this->input->post('text')
         );
-                var_dump($data); die;
+                //var_dump($data); die;
                 
         return $this->db->insert('gigs', $data);
        }
