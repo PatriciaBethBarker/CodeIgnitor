@@ -44,5 +44,32 @@ class Gig_model extends CI_Model {
         return $this->db->get('test_Gigs'); //check this
        }#end get_gigs_form()
        
+       public function add_gig()
+       {
+        $data = array(
+            'title' => $this->input->post('title'),
+            'CompanyName' => $this->input->post('CompanyName'),
+            'CompanyAddress' => $this->input->post('CompanyAddress'),
+            'City' => $this->input->post('City'),
+            'CompanyState' => $this->input->post('CompanyState'),
+            'ZipCode' => $this->input->post('ZipCode'),
+            'CompanyPhone' => $this->input->post('CompanyPhone'),            
+            'CompanyWebsite' => $this->input->post('CompanyWebsite'),
+            'FirstName' => $this->input->post('FirstName'),                
+            'LastName' => $this->input->post('LastName'),                
+            'Email' => $this->input->post('Email'),
+            'Phone' => $this->input->post('Phone'),              
+            'GigQualify' => $this->input->post('GigQualify'),              
+            'EmploymentType' => $this->input->post('EmploymentType'),              
+            'GigOutline' => $this->input->post('GigOutline'),
+            'SpInstructions' => $this->input->post('SpInstructions'),              
+            'PayRate' => $this->input->post('PayRate'),              
+            'GigPosted' => $this->input->post('GigPosted'),              
+            'LastUpdated' => $this->input->post('LastUpdated'),              
+            'text' => $this->input->post('text')
+        );
+
+        return $this->db->insert('gigs', $data);
+       }
 
 }#end of the Gig_model
