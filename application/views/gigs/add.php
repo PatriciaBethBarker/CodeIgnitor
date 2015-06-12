@@ -2,13 +2,12 @@
 /**
 * add.php view page for generic gigs_form controller
 *
-*
 * views/gigs/add.php
 *
 * @package ITC 260 Gig Central CodeIgnitor
 * @subpackage Gig
 * @author Patricia Barker <pbarke01@seattlecentral.edu>
-* @version 2.0 2015/05/25
+* @version 2.1 2015/06/11
 * @link http://www.tcbcommercialproperties.com/sandbox/codeignitor/
 * @license http://www.apache.org/licenses/LICENSE-2.0
 * @see Gig_model.php
@@ -95,7 +94,7 @@ echo '
             <div class="form-group">
                 <label for="Email" class="col-lg-3 control-label"><em>Email</em></label>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Gig Contact Email">
+                        <input type="text" class="form-control" id="Email" placeholder="Gig Contact Email">
                     </div>
             </div>
             <div class="form-group">
