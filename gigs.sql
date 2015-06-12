@@ -15,51 +15,28 @@
 */
 
 
-SET foreign_key_checks = 0; #turn off constraints temporarily
-
-DROP TABLE IF EXISTS Company;
-DROP TABLE IF EXISTS Contact;
 DROP TABLE IF EXISTS Gigs;
 
-CREATE TABLE Company(
-CompanyID INT UNSIGNED NOT NULL AUTO_INCREMENT,
-InputType ENUM('checkbox','radio','select','text') DEFAULT 'select',
-CompanyName varchar(100) NOT NULL,
-CompanyAddress varchar(85) NOT NULL,
-City varchar(40) NOT NULL,
-CompanyState varchar(25) NOT NULL DEFAULT "WA",
-ZipCode MEDIUMINT UNSIGNED NOT NULL,
-CompanyPhone varchar(25) NOT NULL,
-CompanyWebsite varchar(100) NOT NULL,
-
-PRIMARY KEY (CompanyID)
-FOREIGN KEY (GigsID) REFERENCES Contact(ContactID)
-FOREIGN KEY (ContactID) REFERENCES Gigs(GigsID)
-)ENGINE=INNODB;
-
-CREATE TABLE Contact(
-ContactID INT UNSIGNED NOT NULL AUTO_INCREMENT,
-FirstName varchar(30) NOT NULL,
-LastName varchar(30) NOT NULL,
-Email varchar(75) DEFAULT '',
-Phone varchar(25) NOT NULL,
-PRIMARY KEY (CompanyID)
-FOREIGN KEY (GigsID) REFERENCES Contact(ContactID)
-FOREIGN KEY (ContactID) REFERENCES Gigs(GigsID)
-)ENGINE=INNODB;
-
 CREATE TABLE Gigs(
-GigsID INT UNSIGNED NOT NULL AUTO_INCREMENT,
-GigQualify varchar(500) NOT NULL,
-EmploymentType varchar(255) NOT NULL,
-GigOutline varchar(500) NOT NULL,
+GigID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+CompanyName varchar(100)  DEFAULT '',
+CompanyAddress varchar(85)  DEFAULT '',
+City varchar(40)  DEFAULT '',
+CompanyState varchar(25)  DEFAULT '' DEFAULT "WA",
+ZipCode varchar(25)  DEFAULT '',
+CompanyPhone varchar(25)  DEFAULT '',
+CompanyWebsite varchar(100)  DEFAULT '',
+FirstName varchar(30)  DEFAULT '',
+LastName varchar(30)  DEFAULT '',
+Email varchar(75) DEFAULT '',
+Phone varchar(25)  DEFAULT '',
+GigQualify varchar(500)  DEFAULT '',
+EmploymentType varchar(255)  DEFAULT '',
+GigOutline varchar(500)  DEFAULT '',
 SpInstructions varchar(350) DEFAULT '',
-PayRate varchar(50) NOT NULL,
+PayRate varchar(50)  DEFAULT '',
 GigPosted DATETIME,
-
 LastUpdated TIMESTAMP DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
-PRIMARY KEY (CompanyID)
-FOREIGN KEY (GigsID) REFERENCES Contact(ContactID)
-FOREIGN KEY (ContactID) REFERENCES Gigs(GigsID)
+PRIMARY KEY (GigID)
 )ENGINE=INNODB; #INNODB allows creation table w/the same name in another db, table names will not collide
 
