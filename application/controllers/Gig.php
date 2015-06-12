@@ -54,10 +54,27 @@ class Gig extends CI_Controller
         }#end function index
 
         public function add()
+        {
+   
+        if ($this->form_validation->run() === FALSE)
         {//create form to add gigs
                 $this->load->helper('form');
 		$this->config->set_item('title', 'Gig');
 		$this->load->view('gigs/add'); //rename view folder gigs/add  add.php is the view
+        }
+        else
+        {//this processes
+            $this->gig_model->add_gig();
+            $this->load->view('templates/header', $data);
+            $this->load->view('gigs/view');
+            $this->load->view('templates/footer');
+        }        
+     
         }#end function addForm()
 
+        
+        
+        
+        
+        
 }#end Gigs class/controller
