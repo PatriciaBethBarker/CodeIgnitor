@@ -68,7 +68,8 @@ class Gig_model extends CI_Model {
             'LastUpdated' => $this->input->post('LastUpdated'),              
             'text' => $this->input->post('text')
         );
-
+                var_dump($data); die;
+                
         return $this->db->insert('gigs', $data);
        }
 
