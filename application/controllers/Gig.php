@@ -7,11 +7,12 @@
 * @package ITC 260 Gig Central CodeIgnitor
 * @subpackage Gigs_form
 * @author Patricia Barker <patriciabethbarker@gmail.com>
-* @version 2.0 2015/05/24
+* @version 2.2 2015/06/12
 * @link http://www.tcbcommercialproperties.com/sandbox/codeignitor/
 * @license http://www.apache.org/licenses/LICENSE-2.0
 * @see Gig_model.php
 * @see view/gigs/add.php
+* @see view/gigs/view.php
 * @todo none
 */
 
@@ -65,7 +66,7 @@ class Gig extends CI_Controller
         }
         else
         {//this processes
-                echo "blah"; die;
+               // echo "blah"; die;
             $this->gig_model->add_gig();
             $this->load->view('templates/header', $data);
             $this->load->view('gigs/view');
