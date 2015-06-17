@@ -48,36 +48,57 @@ class Gig extends CI_Controller
         public function index()
         {//begin function index
                 //$data['query'] = $this->gig_model->get_customers();//check this
+                $this->config->set_item("title", "gigs");
                 $data['query'] = $this->gig_model->get_gigs();//check this
                 $data['title']= 'Gig';
 
-                $this->load->view('gigs/index', data);
+                $this->load->view('gigs/index', $data);
         }#end function index
 
-        public function add()
+        public function view($slug = NULL)
+{//begin function index
+        //$data['query'] = $this->gig_model->get_customers();//check this
+        $data['gigs'] = $this->gig_model->get_gigs($slug);//check this
+
+        if (empty($data['gig']))
         {
-                $this->load->helper('form');
-                $this->load->library('form_validation');
-                
-        if ($this->form_validation->run() === FALSE)
-        {//create form to add gigs
-		$this->config->set_item('title', 'Gig');
-		$this->load->view('gigs/add'); //rename view folder gigs/add  add.php is the view
+                show_404();
         }
-        else
-        {//this processes
-               // echo "blah"; die;
-            $this->gig_model->add_gig();
-            $this->load->view('templates/header', $data);
-            $this->load->view('gigs/view');
-            $this->load->view('templates/footer');
-        }        
-     
+
+        $data['title']= $data['Gig']['title'];
+        $this->load->view('gigs/view', data);
+}#end function index
+
+
+public function add()
+{
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+
+        $data['title'] = 'Add a new gig';
+
+$this->form_validation->set_rules('CompanyName', 'Company Name', 'required');
+$this->form_validation->set_rules('Email', 'Email', 'required');
+
+if ($this->form_validation->run() === FALSE)
+{//create form to add gigs
+$this->config->set_item('title', 'Gig');
+$this->load->view('gigs/add'); //rename view folder gigs/add  add.php is the view
+}
+else
+{//this processes
+       // echo "blah"; die;
+    $this->gig_model->add_gig();
+    $this->load->view('templates/header', $data);
+    $this->load->view('gigs/view');
+    $this->load->view('templates/footer');
+}   
+
         }#end function addForm()
 
-        
-        
-        
-        
-        
+
+
+
+
+
 }#end Gigs class/controller

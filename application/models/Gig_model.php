@@ -8,12 +8,12 @@
 * @subpackage CONTROLLER
 * @author Patricia Barker <patriciabethbarker@gmail.com>
 * @version 2.1 2015/06/11
-* @link http://www.tcbcommercialproperties.com/sandbox/codeignitor/ 
+* @link http://www.tcbcommercialproperties.com/sandbox/codeignitor/
 * @license http://www.apache.org/licenses/LICENSE-2.0
 * @see controllers/Gig.php
 * @see views/gigs/add.php
 * @see add.php
-* @todo none  
+* @todo none
 */
 
 /**
@@ -23,7 +23,7 @@
  * @todo none
  */
 class Gig_model extends CI_Model {
-        
+
          /**
          * Loads default data into Object
          *
@@ -35,41 +35,52 @@ class Gig_model extends CI_Model {
         {
                 $this->load->database();
         }#end constructor
-       
+
        //public function get_customers()
-       public function get_gigs()
+       public function get_gigs($slug = FALSE)
        {
+         if ($slug === FALSE)
+           {
+             $query = $this->db->get('gigs');
+             return $this->db->get('Gigs');
+           }
         //return "Hello from the Gigs_form model!";
         //return $this->db->get('test_Customers'); //check this
-        return $this->db->get('Gigs'); //check this
+            $query = $this->db->get_where('gigs', array('slug'=> $slug));
+            return $query->row_array();
        }#end get_gigs_form()
-       
+
        public function add_gig()
        {
+         $this->load->helper('url');
+
+         $slug = url_title($this->input->post('title'), 'dash', TRUE);
+
         $data = array(
+            'slug' => $slug,
             'title' => $this->input->post('title'),
             'CompanyName' => $this->input->post('CompanyName'),
             'CompanyAddress' => $this->input->post('CompanyAddress'),
             'City' => $this->input->post('City'),
             'CompanyState' => $this->input->post('CompanyState'),
             'ZipCode' => $this->input->post('ZipCode'),
-            'CompanyPhone' => $this->input->post('CompanyPhone'),            
+            'CompanyPhone' => $this->input->post('CompanyPhone'),
             'CompanyWebsite' => $this->input->post('CompanyWebsite'),
-            'FirstName' => $this->input->post('FirstName'),                
-            'LastName' => $this->input->post('LastName'),                
+            'FirstName' => $this->input->post('FirstName'),
+            'LastName' => $this->input->post('LastName'),
             'Email' => $this->input->post('Email'),
-            'Phone' => $this->input->post('Phone'),              
-            'GigQualify' => $this->input->post('GigQualify'),              
-            'EmploymentType' => $this->input->post('EmploymentType'),              
+            'Phone' => $this->input->post('Phone'),
+            'GigQualify' => $this->input->post('GigQualify'),
+            'EmploymentType' => $this->input->post('EmploymentType'),
             'GigOutline' => $this->input->post('GigOutline'),
-            'SpInstructions' => $this->input->post('SpInstructions'),              
-            'PayRate' => $this->input->post('PayRate'),              
-            'GigPosted' => $this->input->post('GigPosted'),              
-            'LastUpdated' => $this->input->post('LastUpdated'),              
+            'SpInstructions' => $this->input->post('SpInstructions'),
+            'PayRate' => $this->input->post('PayRate'),
+            'GigPosted' => $this->input->post('GigPosted'),
+            'LastUpdated' => $this->input->post('LastUpdated'),
             'text' => $this->input->post('text')
         );
                 //var_dump($data); die;
-                
+
         return $this->db->insert('gigs', $data);
        }
 

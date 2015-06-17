@@ -22,7 +22,7 @@ echo '
 <div class="container">
   <div class="col-lg-10">
     <h1>Gigs Form</h1>
-        <form class="form-horizontal" role="form" method="post" action="add">
+        <form class="form-horizontal" role="form" method="post" action="view">
         <fieldset>
             <div class="form-group">
                 <legend><h2><strong>Company Information</strong></h2></legend>

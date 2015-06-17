@@ -66,8 +66,9 @@ $route['news/create'] = 'news/create';
 $route['news/(:any)'] = 'news/view/$1';
 $route['news'] = 'news';
 
-$route['gigs_form'] = 'gigs_form';
-$route['gigs/(:any)'] = 'gig/view/$1';
+$route['gigs'] = 'gig/index';
+$route['gigs/view/(:any)'] = 'gig/view/$1';
+$route['gigs/add'] = 'gig/add';
 
 //$route['customer'] = 'customer';
 $route['customers'] = 'customer';
