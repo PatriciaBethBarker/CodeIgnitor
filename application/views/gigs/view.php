@@ -18,17 +18,18 @@
    $this->load->view($this->config->item('theme') . 'header');
 ?>
 
-<?php
 
-echo '
 
 <div class="container">
-  <div>
-    <h1>This is where we will see the posted Gig</h1>
+<?php
+  echo 
+    '<h1>' . $gigs['title'] .  '</h1>';
+    echo $gigs['text'];
 
-    </div>
+?>
 </div>
-';
+
+<?php
 
     $this->load->view($this->config->item('theme') . 'footer');
 ?>

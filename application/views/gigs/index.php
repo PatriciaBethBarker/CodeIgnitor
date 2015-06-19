@@ -23,14 +23,20 @@
 
 echo '
 
-    <h1>Gigs List</h1>
-
+    <h1>G<?php echo $title ?></h1>
+    
+    <?php foreach ($gigs as $gig) : ?>
+        <h3><?php echo $gig["title"] ?><h3>
 
 <div>
-    <h2><strong>Gig Opportunity</strong></h2>
-
-    
+    <h2><?php echo $gig["text"] ?></h2>
 </div>
+
+    <?php echo anchor ("gigs/" . $gig["slug"], "Gig View") ?>
+
+    <?php endforeach ?>
+
+
 ';
 
     $this->load->view($this->config->item('theme') . 'footer');
